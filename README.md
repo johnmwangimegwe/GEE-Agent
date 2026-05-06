@@ -8,11 +8,11 @@
 
 The **Udara Flood Intelligence Agent** is a multi-agent AI system designed to save lives through early warning of floods in Kenya, and across Africa.
 
-This project transforms a general-purpose Google Earth Engine (GEE) dataset explorer into a **mission-critical Flood Early Warning System (EWS)** — one that monitors rainfall, soil moisture, and satellite imagery to issue community flood alerts in real time.
+This project transforms a general-purpose Google Earth Engine (GEE) dataset explorer into a **mission-critical Flood Early Warning System (EWS)** - one that monitors rainfall, soil moisture, and satellite imagery to issue community flood alerts in real time.
 
 Built on top of **Google's Agent Development Kit (ADK)**, the system demonstrates how agentic AI can move beyond simple chatbots to become **active monitors** of environmental risk - agents that watch the watershed so communities don't have to.
 
-**Mission:** To build equitable, community-centred AI tools that provide life-saving flood early warnings to vulnerable communities in Kenya, Ghana, and Africa — starting with the Tana River Basin and expanding continent-wide.
+**Mission:** To build equitable, community-centred AI tools that provide life-saving flood early warnings to vulnerable communities in Kenya, Ghana, and Africa - starting with the Tana River Basin and expanding continent-wide.
 
 ---
 
@@ -44,15 +44,15 @@ The system is pre-configured with 7 flood-relevant GEE datasets:
 
 GPM IMERG (`NASA/GPM_L3/IMERG_V06`) - 10 km resolution, updates every 30 minutes. Primary rainfall monitoring tool. Covers the globe. Key band: `precipitationCal`.
 
-SMAP Soil Moisture (`NASA_USDA/HSL/SMAP10KM_soil_moisture`) - 10 km, daily. Measures soil saturation — the single best predictor of flood potential. Values above 0.85 mean near-saturated soil where even light rain triggers flooding.
+SMAP Soil Moisture (`NASA_USDA/HSL/SMAP10KM_soil_moisture`) - 10 km, daily. Measures soil saturation - the single best predictor of flood potential. Values above 0.85 mean near-saturated soil where even light rain triggers flooding.
 
-Sentinel-1 SAR (`COPERNICUS/S1_GRD`) - 10 m resolution, 6-12 day revisit. Sees through clouds using radar — critical during Africa's rainy seasons when optical imagery is blocked. Key band: VV polarisation.
+Sentinel-1 SAR (`COPERNICUS/S1_GRD`) - 10 m resolution, 6-12 day revisit. Sees through clouds using radar - critical during Africa's rainy seasons when optical imagery is blocked. Key band: VV polarisation.
 
 MERIT DEM (`MERIT/DEM/v1_0_3`) - 90 m, static. Digital elevation model used to model which downstream areas flood when a river overflows.
 
-JRC Global Surface Water (`JRC/GSW1_4/GlobalSurfaceWater`) - 30 m, annual. Permanent water baseline — used to separate new flood water from rivers and lakes that are always there.
+JRC Global Surface Water (`JRC/GSW1_4/GlobalSurfaceWater`) - 30 m, annual. Permanent water baseline - used to separate new flood water from rivers and lakes that are always there.
 
-WorldPop (`WorldPop/GP/100m/pop`) - 100 m, annual. Population density — used to estimate how many people are in a flood impact zone.
+WorldPop (`WorldPop/GP/100m/pop`) - 100 m, annual. Population density - used to estimate how many people are in a flood impact zone.
 
 Global Flood Database (`GLOBAL_FLOOD_DB/MODIS_EVENTS/V1`) - 250 m, historical events 2000-2018. Historical flood footprints used as a baseline for what a flood looks like in a given area.
 
