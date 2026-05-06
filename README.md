@@ -210,7 +210,6 @@ This starts an interactive chat session directly in your terminal.
 ```
 
 ```
-Who created you?
 What is the flood risk in Nairobi, Kenya during the rainy season?
 Explain how Sentinel-1 SAR detects floods through clouds
 Rainfall of 120mm in the Volta Basin, Ghana. Issue an extreme alert.
@@ -289,6 +288,7 @@ This project builds on the work of Eric Abelson and Kristopher Overholt who buil
 Data Scientist and postgraduate student specialising in Graph Neural Networks and Reinforcement Learning, with research centred on building equitable AI systems for healthcare resource allocation in high-scarcity African environments. Beyond research, John is an active voice in the tech community, serving as a co-organizer for GDG Google Earth Engine.
 
 LinkedIn: https://www.linkedin.com/in/john-megwe-539982222/
+
 GitHub: https://github.com/johnmwangimegwe
 
 ---
