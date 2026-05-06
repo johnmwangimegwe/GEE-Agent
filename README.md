@@ -219,11 +219,11 @@ Rainfall of 120mm in the Volta Basin, Ghana. Issue an extreme alert.
 
 ## 🧠 How RAG Works in This System
 
-This project implements Retrieval Augmented Generation without any external vector database — making it fully runnable offline and on the free tier.
+This project implements Retrieval Augmented Generation without any external vector database - making it fully runnable offline and on the free tier.
 
 The knowledge base in `rag_store.py` contains 10 curated flood documents covering: Kenya flood patterns (Tana River, Lake Victoria, Nairobi urban floods), Ghana flood patterns (Volta Basin, Accra), GEE technical methodology (GPM IMERG, Sentinel-1, SMAP), Early Warning System design for African communities, and historical flood events in Kenya from 2018 to 2024.
 
-Retrieval uses keyword scoring — no embedding API calls needed. Each document is scored against the user query using term frequency, with regional boosts for Kenya and Ghana-specific queries. The top 3 most relevant documents are returned to the agent which synthesises them into its response.
+Retrieval uses keyword scoring - no embedding API calls needed. Each document is scored against the user query using term frequency, with regional boosts for Kenya and Ghana-specific queries. The top 3 most relevant documents are returned to the agent which synthesises them into its response.
 
 To add new knowledge documents, open `rag_store.py` and add an entry to `FLOOD_KNOWLEDGE_BASE` following this pattern:
 
@@ -257,7 +257,7 @@ You have hit the free tier daily quota of 20 requests per day per model. Options
 
 **`503 UNAVAILABLE`**
 
-Google's servers are under high load — common during Google IO season. Wait 2-5 minutes and try again. If it persists, swap to a different model in `agent.py` and restart `adk web`.
+Google's servers are under high load - common during Google IO season. Wait 2-5 minutes and try again. If it persists, swap to a different model in `agent.py` and restart `adk web`.
 
 **`400 INVALID_ARGUMENT: Built-in tools and Function Calling cannot be combined`**
 
