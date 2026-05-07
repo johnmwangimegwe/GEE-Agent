@@ -44,8 +44,8 @@ model = "gemini-3-flash-preview"
 
 gee_search_agent = Agent(
     name="gee_search_agent",
-    #model=MODEL_SEARCH,
-    model=model,
+    model=MODEL_SEARCH,
+    #model=model,
     description="""
         Coordinates the process of helping users discover and understand Google
         Earth Engine datasets. Coordinates search and details agents, and presents the findings.
@@ -90,8 +90,8 @@ gee_search_agent = Agent(
 
 flood_knowledge_agent = Agent(
     name="flood_knowledge_agent",
-    #model=MODEL_KNOW,
-    model=model,
+    model=MODEL_KNOW,
+    #model=model,
 
     description="""
         RAG-powered agent that retrieves expert flood knowledge about Kenya, and Africa. 
@@ -132,8 +132,8 @@ flood_knowledge_agent = Agent(
 
 risk_assessment_agent = Agent(
     name="risk_assessment_agent",
-    #model=MODEL_RISK,
-    model=model,
+    model=MODEL_RISK,
+    #model=model,
     description="""
         Evaluates flood risk from rainfall and soil moisture data.
         Issues Watch / Warning / Alert / Extreme level assessments.
@@ -179,8 +179,8 @@ risk_assessment_agent = Agent(
 
 web_search_agent = Agent(
     name="web_search_agent",
-    #model=MODEL_WEB,
-    model=model,
+    model=MODEL_WEB,
+    #model=model,
     description="""
         Searches the web for current flood news, weather advisories, and
         humanitarian situation reports for Kenya, and Africa.
@@ -209,8 +209,8 @@ web_search_agent = Agent(
 
 web_fetch_agent = Agent(
     name="web_fetch_agent",
-    # model=MODEL_WEB,
-    model=model,
+    model=MODEL_WEB,
+    # model=model,
     description="""
         Fetches the full text content of a webpage given a URL.
         Used to retrieve GEE catalog pages, situation reports, and advisories.
@@ -236,8 +236,8 @@ web_fetch_agent = Agent(
 
 root_agent = Agent(
     name="flood_intelligence_agent",
-    #model=MODEL_ROOT,
-    model=model,
+    model=MODEL_ROOT,
+    # model=model,
     tools=[
         agent_tool.AgentTool(agent=gee_search_agent),
         agent_tool.AgentTool(agent=flood_knowledge_agent),
