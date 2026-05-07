@@ -149,6 +149,7 @@ Free tier gives you 15-20 requests per day per model at no cost. For workshops o
 Create a file called `.env` inside the `gee_agent/` folder with this single line:
 
 ```
+GOOGLE_GENAI_USE_VERTEXAI=FALSE
 GOOGLE_API_KEY=your_actual_api_key_here
 ```
 
