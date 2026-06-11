@@ -272,23 +272,12 @@ Normal ADK cold start behaviour. Send a warmup message first, wait for a respons
 ## 🗺️ Roadmap
 
 Planned improvements include live Google Earth Engine integration, automated GPM IMERG rainfall monitoring, SMAP soil moisture analysis, Sentinel-1 SAR flood extent mapping, Kenya-specific alert thresholds, Swahili and English community alert generation, Vertex AI deployment, MCP-based access to Google Cloud services, and optional dashboard visualisation for Kenyan flood-risk regions.
+
 ---
 
 ## 📚 Acknowledgements
 
 This project builds on the work of Eric Abelson and Kristopher Overholt who built the original GEE ADK dataset explorer, Renee Johnston who created the first GEE vector and text embedding search tool, the Google Science Team for Earth Engine community experiments, and the Google ADK Team for the Agent Development Kit framework at https://google.github.io/adk-docs/.
-
----
-
-## 👨‍💻 Author
-
-**John M. Megwe**
-
-Data Scientist and postgraduate student specialising in Graph Neural Networks and Reinforcement Learning, with research centred on building equitable AI systems for healthcare resource allocation in high-scarcity African environments. Beyond research, John is an active voice in the tech community, serving as a co-organizer for GDG Google Earth Engine.
-
-LinkedIn: https://www.linkedin.com/in/john-megwe-539982222/
-
-GitHub: https://github.com/johnmwangimegwe
 
 ---
 

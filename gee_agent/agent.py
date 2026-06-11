@@ -22,11 +22,6 @@ from gee_agent.tools import (
     list_available_regions,
 )
 
-try:
-    from gee_agent.mcp_tools import get_mcp_toolset
-except ImportError:
-    get_mcp_toolset = None
-
 
 # ==============================================================================
 # MODEL CONFIGURATION
@@ -243,36 +238,6 @@ web_fetch_agent = Agent(
 
 
 # ==============================================================================
-# OPTIONAL MCP TOOLSET
-# ------------------------------------------------------------------------------
-# If gee_agent/mcp_tools.py exists and returns a valid MCP toolset, it will be
-# added to the root agent. If not, the project still runs normally.
-# ==============================================================================
-
-def build_root_tools():
-    """Build the root-agent tool list, including optional MCP tools if available."""
-    tools = [
-        agent_tool.AgentTool(agent=gee_search_agent),
-        agent_tool.AgentTool(agent=flood_knowledge_agent),
-        agent_tool.AgentTool(agent=risk_assessment_agent),
-        agent_tool.AgentTool(agent=web_search_agent),
-        agent_tool.AgentTool(agent=web_fetch_agent),
-    ]
-
-    if get_mcp_toolset is not None:
-        try:
-            mcp_toolset = get_mcp_toolset()
-            if mcp_toolset is not None:
-                tools.append(mcp_toolset)
-        except Exception:
-            # MCP is optional. If it is not configured correctly, keep the core
-            # Kenya flood agent running without blocking startup.
-            pass
-
-    return tools
-
-
-# ==============================================================================
 # ROOT AGENT: KENYA FLOOD INTELLIGENCE COORDINATOR
 # ==============================================================================
 
@@ -335,5 +300,10 @@ root_agent = Agent(
         - Clearly separate observed data, forecast data, and assumptions.
         - Recommend practical next steps for monitoring and preparedness.
     """,
-    tools=build_root_tools(),
+    tools=[
+    agent_tool.AgentTool(agent=gee_search_agent),
+    agent_tool.AgentTool(agent=flood_knowledge_agent),
+    agent_tool.AgentTool(agent=risk_assessment_agent),
+    agent_tool.AgentTool(agent=web_search_agent),
+    agent_tool.AgentTool(agent=web_fetch_agent),],
 )
